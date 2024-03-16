@@ -1,0 +1,289 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: rgb(250, 210, 250);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*----------Home-----------*/
+.navigation{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+.img1{
+    width: 50px;
+    height: 50px;
+    align-items: left;
+}
+.button{
+    flex: 1;
+    text-align: right;
+}
+.button ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.button ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+.button ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: black;
+    display: block;
+    margin: auto;
+}
+.button ul li:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+.text-box{
+    width: 60%;
+    color:black;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 30%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 65px;
+    position: relative;
+}
+.text-box h1 span{
+    color: rgb(230, 56, 56);
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 30px;
+    color: black;
+    margin-left: 3%;
+}
+.github{
+    width: 50px;
+    height:50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.linkdln{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.Me{
+    width:400px;
+    height: 500px;
+    margin-left: 65%;
+    margin-top: 3%;
+    border-radius:20px;
+}
+.Resume{
+    color: black;
+    border: 3px solid rgb(230, 56, 56);
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+    padding: 12px 34px;
+    border-radius:10px 50px;
+}
+.Resume:hover{
+    border:3px solid black;
+    background: rgb(246, 169, 169);
+    color:black;
+    transition-duration: all 5s ease-in-out;
+    border-radius:10px 50px;
+}
+
+@media(max-width: 700px){
+    .navigation{
+        height: 50vh;
+    }
+    .Me{
+        margin-top:20px;
+        margin-left: 450px;
+        height: 300px;
+        width: 300px;
+    }
+    .text-box{
+        top: 200px;
+    }
+    .text-box h1{
+        font-size: 14px;
+    }
+    .text-box p{
+        font-size: 12px;
+    }
+}
+
+/*----------------Portfolio------------*/
+.portfolio{
+    width: 100%;
+    margin-top:10%;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.portfolio-col-1{
+    flex-basis: 35%;
+}
+.portfolio-col-1 img{
+    height: 500px;
+    width:350px;
+    border-radius:10%;
+    margin-left: 20%;
+}
+.portfolio-col-2{
+    flex-basis: 60%;
+    color: black;
+}
+.sub-title{
+    color:black;
+    font-size: 60px;
+    font-weight: 600;
+}
+.portfolio-col-2 p{
+    font-size: 16px;
+}
+.para{
+    width:800px;
+}
+.tab-titles{
+    display:flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight:500;
+    cursor:pointer;
+    position:relative;
+}
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: rgb(230, 56, 56);
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-links ul li{
+    padding-left:5px;
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: red;
+    font-size: 18px;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display:block;
+}
+@media(max-width: 700px){
+    .portfolio-col-1 img{
+        height: 300px;
+        width: 300px;
+    }
+}
+/*-----------Contact---------*/
+.box{
+    width: 100vh;
+}
+.contact{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+.contact-left{
+    color:white;
+    flex-basis: 35%;
+}
+.contact-right{
+    color:white;
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+    color: black;
+}
+.contact-left p i{
+    color: rgb(230, 56, 56);
+    margin-right: 15px;
+    font-size: 25px;
+}
+.icons{
+    margin-top: 5px;
+    height: 30px;
+    width:30px;
+    text-decoration:none;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social{
+    margin-top: 30px;
+}
+.icons:hover{
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background-color: rgb(230, 56, 56);
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px 50px;
+    cursor: pointer;
+    margin-bottom: 5%;
+} 
+.contact-right form{
+    width: 80%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px; 
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+#msg{
+    margin-top: 5%;
+    color: purple;
+}
+
+/*------------------CSS for small screen--------------*/
+@media(max-width: 700px){
+   #msg{
+       color: purple;
+       margin-top: 10px;
+       display:block;
+    }
+}

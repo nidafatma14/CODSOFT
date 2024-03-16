@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="styleportfolio.css" rel="stylesheet"> 
+</head>
+<body>
+<section class="navigation" id="nav">
+    <div class="button">
+        <nav class = "container">
+            <img class = "img1" src="./name logo.jpg" alt = "noimg">
+            <ul>
+                <li>
+                    <a href="#nav">
+                      Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#portfolio">
+                      Education
+                    </a>
+                </li>
+                <li>
+                    <a href="#portfolio">
+                      Experience
+                    </a>
+                </li>
+                <li>
+                    <a href="#portfolio">
+                      Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                      Contact Me
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="text-box">
+        <h1>Hi all I'm <span> &nbsp;Nida</span></h1>
+        <p>
+          <i>A passionate Full Stack Developer having an experience of building Web applications with JavaScript/ReactJs/NodeJs and some other cool libraries and frameworks.</i>
+        </p>
+        <br>
+        <img class="github" src="../social icons/github.png" onclick="location.href= 'https://github.com/nidafatma14'" alt="noimg">
+        <img class="linkdln" src="../social icons/link.png" onclick="location.href = 'https://www.linkedin.com/in/nida-fatma-3356081a6/'" alt="noimg">
+        <br><br><br>
+        <a class="Resume" onclick="location.href='./CV Nidafatma.pdf'">
+          SEE MY RESUME
+        </a>
+    </div>
+    <img class="Me" src="./Me.jpeg" alt="noimg">     
+</section>
+
+<!--Portfolio-->
+<section class="portfolio" id="portfolio">
+    <div class = "row">
+        <div class="portfolio-col-1">
+            <img src="./Me2.jpeg">
+        </div>
+        <div class="portfolio-col-2">
+            <h1 class="sub-title">Portfolio</h1>
+            <p class="para">As a developer adept in HTML, CSS, and JavaScript, I craft visually engaging web interfaces. 
+                Leveraging React.js, I infuse interactivity and seamless navigation into static pages. In the backend, I excel with Node.js, architecting robust server-side applications for optimal performance. 
+                My proficiency extends to languages like C++ and Python, empowering me to tackle diverse challenges with finesse, from crafting efficient algorithms to developing complex systems. 
+                With a passion for innovation and detail, I thrive in collaborative environments, contributing expertise to drive projects forward. 
+                From front-end finesse to back-end mastery, I'm poised to excel in any challenge.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>2011-2019</span><br>Shri Shikshayatan School</li>
+                        <li><span>2019-2021</span><br>Mount Litera ZEE School</li>
+                        <li><span>2022-Current</span><br>Kalyani Government Engineering College</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023-Current</span><br>GDSC Memeber</li>
+                        <li><span>2023-Current</span><br>KeyGen Coders Member</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>Survey Form</span><br>Created a survey form project using HTML for structure and CSS for styling. 
+                            Employed HTML input elements for user interaction, such as text fields, radio buttons, and checkboxes. 
+                            Applied CSS for layout, color, and visual appeal.  </li>
+                        <li><span>Tribute Page</span><br>Developed a tribute page project utilizing HTML for content structure and CSS for styling. 
+                            Incorporated images, text, and links to honor the subject effectively. 
+                            Applied CSS for layout design, typography, and visual enhancements. </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Contact-->
+<section class="contact" id="contact">
+    <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><img src="../social icons/email.png" class="icons">fatmanida15@gmail.com</p>
+            <p><img src="../social icons/telephone.png" class="icons">9674613086</p>
+            <div>
+                <a href="https://www.facebook.com/profile.php?id=100087736752473">
+                    <img src="../social icons/facebook.png" class="icons social">
+                </a>
+                <a href="https://www.instagram.com/_fatma_.14/?next=%2F">
+                    <img src="../social icons/instagram.png" class="icons social">
+                </a>
+                <a href="https://www.linkedin.com/in/nida-fatma-3356081a6/'">
+                    <img src="../social icons/link.png" class="icons social">
+                </a>
+            </div>
+        </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents"); 
+ 
+    function opentab(tabname){
+       for(tablink of tablinks){
+           tablink.classList.remove("active-link");
+       }
+       for(tabcontent of tabcontents){
+           tabcontent.classList.remove("active-tab");
+       }
+       event.currentTarget.classList.add("active-link");
+       document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwqNYSGr8hOVsEx-TPHFxuOQPTFPQAnFPr_Axp0hJJXi45OnS-hPSzo8Y-pRgToNNnK/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent succesfully!"
+            setTimeout(function(){
+                msg.innerHTML =""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</body>
+</html>
